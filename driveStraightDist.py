@@ -6,6 +6,7 @@ BP = brickpi3.BrickPi3() #Create an instance of the brickpi to be controlled
 def straightDrive(distance, speed):
     distanceEncoder = cl.convertEncoder(distance)
     speedCon = cl.convertSpeed(speed)
+    speedCon = speedCon*1.1
 
     BP.offset_motor_encoder(BP.PORT_A, BP.get_motor_encoder(BP.PORT_A))
     BP.offset_motor_encoder(BP.PORT_B, BP.get_motor_encoder(BP.PORT_B))

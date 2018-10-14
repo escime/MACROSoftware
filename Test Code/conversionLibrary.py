@@ -7,5 +7,5 @@ def convertDistance(centi):
     return outputMilli
 
 def convertEncoder(centi):
-    encoderCt = centi*20.9
+    encoderCt = centi*20.82
     return encoderCt

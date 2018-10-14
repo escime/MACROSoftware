@@ -35,6 +35,18 @@ except TypeError as error:
 	print(error)
 except KeyboardInterrupt:
 	print("You pressed ctrl+C...")
+    
+led = 3
+x = 1
+# Turn on LED once sensor exceeds threshold resistance
+grovepi.pinMode(led,"OUTPUT")
+while x != 0:
+    try:
+        grovepi.digitalWrite(led,1)
+        time.sleep(1000)
+        x = 0
+    except IOError:
+        print ("Error")
 
 BP.offset_motor_encoder(BP.PORT_A, BP.get_motor_encoder(BP.PORT_A))
 BP.offset_motor_encoder(BP.PORT_B, BP.get_motor_encoder(BP.PORT_B))
