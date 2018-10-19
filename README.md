@@ -1,7 +1,7 @@
 # MACROSoftware
 All the software for Project 3, more specifically the MACRO.
 
-Current version: 0.2
+Current version: 0.4
 Included Folders:
   > Test Software: This is any code used to test individual functions of the machine, like driving straight or line following.
   
