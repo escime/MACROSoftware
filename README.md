@@ -8,8 +8,7 @@ v0.4:
      > added Ambient Reading class that outputs ambient reading from light sensor.
      > added basic curved line tracking function in GuidedTracking class.
      > added convertDegrees function to conversionLibrary, but this function does not currently work.
-     > added additional functionality to main.
-     > fixed a typo in driveStraightDist.
+     > added additional functionality to main.> fixed a typo in driveStraightDist.
 v0.3:
      > added the ability to drive backwards.
 v0.2:
