@@ -27,8 +27,23 @@
 #
 # The main software running onboard the raspberry PI.
 import driveStraightDist as dsd
+import AmbientReading as ar
+import GuidelineTracking as gt
 
-distance = float(input("What distance would you like the robot to travel (cm)? "))
-speed = float(input("What speed would you like the robot to travel at (cm/s)? "))
+print("Avalible functions: ")
+print("1. Drive at Selected Speed and Distance")
+print("2. Output Ambient Light Sensor Readings")
+print("3. Follow Line")
+userSelect = int(input("What function would you like to select? "))
 
-dsd.straightDrive(distance, speed)
+if(userSelect == 1):
+    distance = float(input("What distance would you like the robot to travel (cm)? "))
+    speed = float(input("What speed would you like the robot to travel at (cm/s)? "))
+    dsd.straightDrive(distance, speed)
+
+if(userSelect == 2):
+    ar.printReadings()
+
+if(userSelect == 3):
+    maxSpeed = float(input("What would you like the maximum speed to be? "))
+    gt.guidelineFollow(maxSpeed)

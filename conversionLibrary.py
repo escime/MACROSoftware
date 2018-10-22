@@ -9,3 +9,7 @@ def convertDistance(centi):
 def convertEncoder(centi):
     encoderCt = centi*20.9
     return encoderCt
+
+def convertDegrees(degrees):
+    encoderCt = degrees*4
+    return encoderCt

@@ -17,7 +17,7 @@ def straightDrive(distance, speed):
         if(distanceEncoder > 0):
             while BP.get_motor_encoder(BP.PORT_A) < distanceEncoder:
                 differential = BP.get_motor_encoder(BP.PORT_A) - BP.get_motor_encoder(BP.PORT_D)
-                BP.set_motor_power(BP.PORT_A+BP.PORT_B, speedCon)
+                BP.set_motor_power(BP.PORT_A+BP.PORT_D, speedCon)
                 if(differential >= 2):
                     while differential >= 1:
                         differential = BP.get_motor_encoder(BP.PORT_A) - BP.get_motor_encoder(BP.PORT_D)
@@ -32,7 +32,7 @@ def straightDrive(distance, speed):
             speedCon = -1 * speedCon
             while BP.get_motor_encoder(BP.PORT_A) > distanceEncoder:
                 differential = abs(BP.get_motor_encoder(BP.PORT_A)) - abs(BP.get_motor_encoder(BP.PORT_D))
-                BP.set_motor_power(BP.PORT_A+BP.PORT_B, speedCon)
+                BP.set_motor_power(BP.PORT_A+BP.PORT_D, speedCon)
                 if(differential >= 2):
                     while differential >= 1:
                         differential = abs(BP.get_motor_encoder(BP.PORT_A)) - abs(BP.get_motor_encoder(BP.PORT_D))
